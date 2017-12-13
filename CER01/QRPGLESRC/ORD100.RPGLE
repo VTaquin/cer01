@@ -1,5 +1,5 @@
       *       Before compilation
-      *       ovrdbf tmpdetord detord
+      * %exec ovrdbf tmpdetord detord
 
      h dftactgrp(*no) bnddir('SAMPLE')
 
