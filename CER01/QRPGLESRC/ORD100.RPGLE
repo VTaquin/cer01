@@ -191,6 +191,7 @@
             ORDATE = %dec(%date():*iso);
             ORDATDEL = 0;
             ORDATCLO = 0;
+            ORSTATUS = ' ';
             write forde;
             odorid = orid;
             setll *loval tmpdetord;
