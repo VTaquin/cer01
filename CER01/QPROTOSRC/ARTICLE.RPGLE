@@ -4,6 +4,12 @@
      DGetArtDesc       PR            50A
      D ARID                           6A    value
       *=============================================
+      * Get ARTICLE DESCRPTION
+      *=============================================
+     DGetArtDescDat    PR            50A
+     D ARID                           6A    value
+     D aDate                           d    options(*nopass)
+      *=============================================
       * Get REF SALE PRICE
       *=============================================
      DGetArtRefSalPrice...
