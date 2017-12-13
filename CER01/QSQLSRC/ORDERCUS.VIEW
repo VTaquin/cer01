@@ -1,0 +1,52 @@
+     --%CSTD===========================================================*
+     --* Application. : CER01      Demonstration Arcad                 *
+     --* Composant. . : ORDERCUS                      Type: VIEW       *
+     --*===============================================================*
+     --* Sous-système :                                                *
+     --* Fonction . . :                                                *
+     --* Sous-fonction:                                                *
+     --*%S=============================================================*
+     --* Description des fonctionnalités:                              *
+     --*                                                               *
+     --*                                                               *
+     --*                                                               *
+     --*%E=============================================================*
+     --* AUTEUR:                          00:00                        *
+     --* MODIFS: 02 VTAQUIN    07/12/2017 16:35  01.00.02    00/       *
+     --*         01 VTAQUIN    07/12/2017 16:17  01.00.01    00/       *
+     --%ECSTD==========================================================*
+
+CREATE VIEW ORDERCUS (
+  ORID ,
+  ORCUID ,
+  CUSTNM ,
+  ORYEAR ,
+  DATORD,
+  DATLIV,
+  DATCLO,
+  TOTVAL )
+  AS
+  SELECT ORID, ORCUID, CUSTNM, ORYEAR,
+         ISOTODATE40(ORDATE)  ,
+         ISOTODATE40(ORDATDEL) ,
+         ISOTODATE40(ORDATCLO)  ,
+         COALESCE ( (SELECT SUM(ODTOTVAT)
+                    FROM   DETORD D
+                    WHERE H.ORID = ODORID ), 0) AS TOTVAL
+   FROM  "ORDER" H ,  CUSTOMER
+   WHERE ORCUID = CUID ;
+
+
+LABEL ON COLUMN ORDERCUS
+( ORID IS 'ORD                 NUM' ,
+  ORCUID IS 'CUST                ID' ,
+  CUSTNM IS 'CUSTOMER            NAME' ,
+  DATLIV IS 'FELIVERY DATE',
+  ORYEAR IS 'YEAR' ) ;
+
+LABEL ON COLUMN ORDERCUS
+( ORID TEXT IS 'ORDER NUMBER' ,
+  ORCUID TEXT IS 'CUSTOMER ID' ,
+  CUSTNM TEXT IS 'CUSTOMER NAME' ,
+  ORYEAR TEXT IS 'YEAR' ) ;
+
