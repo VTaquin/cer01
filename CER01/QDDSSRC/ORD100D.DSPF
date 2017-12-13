@@ -15,7 +15,7 @@
      A                                      EDTCDE(Z)
      A            LINE      R        O  7  6REFFLD(FDETO/ODLINE *LIBL/DETORD)
      A            ODARID    R        O  7 12REFFLD(FDETO/ODARID *LIBL/DETORD)
-     A            ARTDESC       30A  O  7 19
+     A            ARTDESC       30A  O  7 19COLOR(WHT)
      A            ODQTY     R        O  7 50REFFLD(FDETO/ODQTY *LIBL/DETORD)
      A                                      EDTCDE(Z)
      A            ODTOT     R        O  7 66REFFLD(FDETO/ODTOT *LIBL/DETORD)
