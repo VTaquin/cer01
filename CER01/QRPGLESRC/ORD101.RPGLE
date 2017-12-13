@@ -37,7 +37,7 @@
      D  cancel                12     12n
      D  morekeys              24     24n
      D  pagedown              25     25n
-
+     D  Change                27     27n
      D  sflclr                30     30n
      D  sfldsp                31     31n
      D  sfldspctl             32     32n
