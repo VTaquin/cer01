@@ -6,7 +6,7 @@
      d savId           s              6
       *=============================================
      PGetArtInfo       B                     export
-     DGetArtInfo       PI          1520
+     DGetArtInfo       PI          1520     varying
      D P_ARID                         6A    value
       /free
          if P_arid <> savId;
