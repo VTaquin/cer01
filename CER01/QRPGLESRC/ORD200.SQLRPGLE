@@ -239,10 +239,11 @@
            opt01 = 0;
            update sfl01;
          when opt01 = 4;
-           delete orid order1;
+
            dou not %found();
              delete orid detord1;
            enddo;
+            delete orid order1;
            opt01 = 0;
            update sfl01;
          when opt01 = 5;
