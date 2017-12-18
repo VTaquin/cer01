@@ -2,7 +2,7 @@
 
       /copy qprotosrc,ARTICLE
 
-     d savInfo         s           1520
+     d savInfo         s           1520    varying
      d savId           s              6
       *=============================================
      PGetArtInfo       B                     export
@@ -16,6 +16,6 @@
               where arid = :savid;
          endif;
 
-         return savinfo;
+         return %trim(savinfo);
       /end-free
      pGetArtInfo       e

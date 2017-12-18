@@ -59,7 +59,7 @@
       *=============================================
       * Get ARTICLE Info
       *=============================================
-     DGetArtInfo       PR          1520A
+     DGetArtInfo       PR          1520A    varying
      D ARID                           6A    value
       *=============================================
       * Close ARTICLE1

@@ -239,7 +239,6 @@
            opt01 = 0;
            update sfl01;
          when opt01 = 4;
-
            dou not %found();
              delete orid detord1;
            enddo;
